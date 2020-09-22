@@ -1,0 +1,65 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+td, th {
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-left: 0px;
+}
+
+li {
+  float: left;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li:hover a {
+  background: rgb(255, 155, 255);
+  color: white;
+}
+
+body { 
+  padding-top: 20px;
+  margin: 0;
+}
+
+.banner {
+  height: 300px;
+  width: 100%;
+  background-image: url("https://www.gordonkamitomo.com/wp-content/uploads/2017/09/LinkedIn-Banner-Calgary-Skyline2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay-text {
+  text-align: center;
+  text-shadow: 3px 2px #902094;
+  position: relative;
+  left: 50%;
+  color: rgb(255, 155, 255);
+  transform: translate(-50%, 30%);
+  font-family: 'Courier New', Courier, monospace;
+}
