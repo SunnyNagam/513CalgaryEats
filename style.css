@@ -1,3 +1,6 @@
+:root {
+  --primary-pink: rgb(255, 188, 255);
+}
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -14,11 +17,14 @@ ul {
   list-style-type: none;
   margin: 0px;
   padding: 0;
-  background-color: #333;
+  background-color: rgb(248, 233, 144);
+  /*background-image: url('https://www.gordonkamitomo.com/wp-content/uploads/2017/09/LinkedIn-Banner-Calgary-Skyline2.jpg');
+  */
   position: fixed;
   top: 0;
   width: 100%;
   margin-left: 0px;
+  z-index: 2;
 }
 
 li {
@@ -28,38 +34,54 @@ li {
 
 li a {
   display: block;
-  color: white;
+  text-shadow: 2px 2px #902094;
+  color: rgb(255, 155, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li:hover a {
-  background: rgb(255, 155, 255);
-  color: white;
+  background: var(--primary-pink);
+  color: rgb(199, 33, 199);
+  text-shadow: none;
 }
 
 body { 
   padding-top: 20px;
+  background-color: var(--primary-pink);
+  background-image: linear-gradient(rgb(248, 168, 248), rgb(140, 255, 148));
   margin: 0;
 }
 
 .banner {
   height: 300px;
   width: 100%;
-  background-image: url("https://www.gordonkamitomo.com/wp-content/uploads/2017/09/LinkedIn-Banner-Calgary-Skyline2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transition: transform .8s;
 }
 
-.overlay-text {
+.cool-text-img {
   text-align: center;
-  text-shadow: 3px 2px #902094;
+  text-shadow: 2px 2px #902094;
   position: relative;
   left: 50%;
-  color: rgb(255, 155, 255);
-  transform: translate(-50%, 30%);
+  color: var(--primary-pink);
+  transform: translate(-50%, 250%);
+  z-index: 2;
+  font-family: 'Courier New', Courier, monospace;
+}
+.bannercont:hover > .banner {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  transform: scale(1.1);
+}
+.cool-text {
+  text-align: center;
+  text-shadow: 3px 2px #902094;
+  color: var(--primary-pink);
   font-family: 'Courier New', Courier, monospace;
 }
