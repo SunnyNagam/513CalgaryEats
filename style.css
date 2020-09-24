@@ -2,24 +2,33 @@
   --primary-pink: rgb(255, 188, 255);
 }
 table {
-  font-family: arial, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   border-collapse: collapse;
+  width: 90%;
+  margin: 0 auto;
 }
 td, th {
-  text-align: left;
-  padding: 8px;
+  padding: 7px;
+  text-align: center;
+  border-radius: 10px;
 }
+
+
+
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #c0b3fd;
+  background-image: radial-gradient(rgb(248, 168, 231), rgb(255, 243, 140));
+}
+tr:nth-child(odd) {
+  background-color: #ade09d;
+  background-image: radial-gradient(rgb(169, 163, 241), rgb(165, 243, 168));
 }
 
 ul {
   list-style-type: none;
   margin: 0px;
   padding: 0;
-  background-color: rgb(248, 233, 144);
-  /*background-image: url('https://www.gordonkamitomo.com/wp-content/uploads/2017/09/LinkedIn-Banner-Calgary-Skyline2.jpg');
-  */
+  background-color: rgb(243, 229, 151);
   position: fixed;
   top: 0;
   width: 100%;
@@ -27,31 +36,41 @@ ul {
   z-index: 3;
 }
 
-li {
+.navbar > ul > li {
   float: left;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 li a {
   display: block;
-  text-shadow: 2px 2px #902094;
-  color: rgb(255, 155, 255);
+  color: rgb(231, 133, 223);
+  text-shadow: 1px 1px #902094;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li:hover a {
-  background: var(--primary-pink);
-  color: rgb(199, 33, 199);
+  background: rgb(160, 235, 165);
+  color: rgb(194, 110, 194);
   text-shadow: none;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.selected{
+  background: rgb(160, 235, 165);
 }
 
 body { 
-  padding-top: 20px;
+  padding-top: 40px;
   background-color: var(--primary-pink);
-  background-image: linear-gradient(rgb(248, 168, 248), rgb(140, 255, 148));
+  background-image: linear-gradient(rgb(248, 168, 231), rgb(255, 243, 140));
   margin: 0;
+  width: 100%;
 }
 
 .banner {
@@ -61,7 +80,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  transition: transform .8s;
+  transition: .6s;
 }
 
 .cool-text-img {
@@ -72,7 +91,8 @@ body {
   color: var(--primary-pink);
   transform: translate(-50%, 250%);
   z-index: 2;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Indie Flower', cursive;
+  font-size: 30px;
 }
 .bannercont:hover > .banner {
   filter: blur(3px);
@@ -80,8 +100,115 @@ body {
   transform: scale(1.1);
 }
 .cool-text {
+  font-weight: bold;
   text-align: center;
-  text-shadow: 3px 2px #902094;
-  color: var(--primary-pink);
-  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 2px 2px #4f4ddd;
+  color: rgb(147, 202, 228);
+  font-family: 'Indie Flower', cursive;
+  font-size: 60px;
+}
+
+.cursed {
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px #4f4ddd;
+  color: rgb(147, 202, 228);
+  font-family: 'Indie Flower', cursive;
+  font-size: 60px;
+}
+
+
+.map {
+  display: block;
+  text-align: center;
+  height: 70vh;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+hr {
+  border: 5px solid rgb(230, 225, 158);
+  border-radius: 5px;
+}
+.factslist {
+  list-style-type: none;
+}
+.bannercont > h1:hover {
+  text-align: center;
+  color: #d093d8;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+.cool-text:hover {
+  text-align: center;
+  color: #8993cc;
+  -webkit-animation: glowspin 2s linear infinite;
+  -moz-animation: glowspin 2s linear infinite;
+  animation: glowspin 2s linear infinite;
+}
+
+.cursed:hover{
+  -webkit-animation: cursedglowspin 1.5s linear infinite;
+  -moz-animation: cursedglowspin 1.5s linear infinite;
+  animation: cursedglowspin 1.5s linear infinite;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fdde53, 0 0 40px #fdde53, 0 0 50px #fdde53, 0 0 60px #fdde53, 0 0 70px #fdde53;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fae481, 0 0 40px #fae481, 0 0 50px #fae481, 0 0 60px #fae481, 0 0 70px #fae481, 0 0 80px #fae481;
+  }
+}
+@-webkit-keyframes glowspin {
+  from {
+    transform: rotateZ(0deg);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fdde53, 0 0 40px #fdde53, 0 0 50px #fdde53, 0 0 60px #fdde53, 0 0 70px #fdde53;
+  }
+  to {
+    transform: rotateZ(-360deg);
+    text-shadow: 0 0 20px #fff, 0 0 30px #fae481, 0 0 40px #fae481, 0 0 50px #fae481, 0 0 60px #fae481, 0 0 70px #fae481, 0 0 80px #fae481;
+  }
+}
+@-webkit-keyframes cursedglowspin {
+  from {
+    transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fdde53, 0 0 40px #fdde53, 0 0 50px #fdde53, 0 0 60px #fdde53, 0 0 70px #fdde53;
+  }
+  to {
+    transform: rotateY(-360deg) rotateX(-360deg) rotateZ(-360deg);
+    text-shadow: 0 0 20px #fff, 0 0 30px #fae481, 0 0 40px #fae481, 0 0 50px #fae481, 0 0 60px #fae481, 0 0 70px #fae481, 0 0 80px #fae481;
+  }
+}
+
+.factslist > li::before {   
+  content: '';   
+  display: inline-block;   
+  height: 60px;   
+  width: 60px;    
+  background-size: 60px;   
+  /*https://cdn.lowgif.com/full/e64cdcb56b4a1349-carefully-possess-the-flame-roblox-gfx-roblox-amino.gif*/
+  /*https://media0.giphy.com/media/fLv7wuctc8IIWmg0Od/giphy.gif*/
+  background-image: url('https://cdn.lowgif.com/full/e64cdcb56b4a1349-carefully-possess-the-flame-roblox-gfx-roblox-amino.gif'); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  vertical-align: middle;
+}
+.factslist{
+  font-weight: bold;
+  text-align: left;
+  padding-left: 20%;
+  text-shadow: 2px 2px #44298f;
+  color: rgb(156, 162, 245);
+  font-family: 'Indie Flower', cursive;
+  font-size: 25px;
+}
+
+.factslist > li:hover {
+  /*color: rgb(252, 234, 135);*/
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
